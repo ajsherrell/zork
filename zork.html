@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Zork</title>
+   <style type="text/css">
+   	html {
+   		color: green;
+   		font-family: monospace;
+   		font-size: 30px;
+   		margin: 20px;
+   		padding: 20px;
+   		background-color: black;
+   	}
+   </style>
+</head>
+<body>
+  <h1>Zork</h1>
+  <p>An adventure game! Choose one of the capitalized responses from the prompt.</p>
+   <script type="text/javascript">
+         var user = prompt("Your name is Zork. You live in a city and have never been in a forest. You decide to take a short hike in the forest and come upon an old log cabin in the middle of the wood. Do you KNOCK on the door, WALK away from the cabin, or LOOK through the window?").toUpperCase();
+
+switch(user) {
+    case 'KNOCK':
+        var howMany = prompt("Do you knock TWO or THREE times?").toUpperCase();
+        var useKnocker = prompt("Do you use the knocker shaped like a lion's head? YES or NO?").toUpperCase();
+        if (howMany === "TWO" && useKnocker === "NO") {
+         document.write("The door falls inward with a bang!");
+        } else if (howMany === "THREE" && useKnocker === "YES") {
+            document.write("You hear hurried footsteps from inside and a woman's muffled scream.");
+        } else if (howMany === "TWO" || useKnocker === "YES") {
+            document.write("A woman's voice: 'Who is it?'");
+        } else {
+            document.write("A trap door opens up in the porch and you fall through a long shaft to your death.");
+        }
+         break;
+    case 'WALK':
+         document.write("You continue to have a nice stroll through the forest and move on with your boring existence.");
+         break;
+    case 'LOOK':
+        var justGlance = prompt("Do you just GLANCE through the window, or do you RUB off some of the grime to see more clearly?").toUpperCase();
+        if (justGlance === "GLANCE") {
+            document.write("You see nothing because this window hasn't been cleaned in 50 years!");
+        } else if (justGlance === "RUB") {
+            document.write("You see what seems to be a black bear sitting at a table being served eggs by a woman in rags.");
+        } else {
+            document.write("A trap door opens up in the porch and you fall through a long shaft to your death.");
+        }
+         break;
+    default: 
+         document.write("Hurry! Your life is passing you by. Please choose either KNOCK, WALK, or RUN.");
+};        
+      //-->
+   </script>
+   
+</body>
+</html>
