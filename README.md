@@ -2,6 +2,7 @@
 A popular game from the 1980's.
 
 ## This app uses:
+- JavaScript
 - HTML
 - CSS
 
